@@ -29,8 +29,24 @@ const Canvas = () => {
   };
 
   return (
-    <div className="canvas" onDrop={handleDrop} onDragOver={handleDragOver}>
-      {/* Canvas content here */}
+    <div   className='w-full h-full  bg-slate-200 '   onDrop={handleDrop} onDragOver={handleDragOver}>
+      
+         <div  className='first-layout flex items-center justify-center text-2xl '>
+               <h1>Header</h1>  
+         </div>
+
+
+         <div className='second-layout flex items-center justify-center text-2xl'>
+              <h1>Main-body</h1>
+         </div>
+   
+
+         <div  className='h-20 flex items-center justify-center text-2xl' >
+              
+              <h1>Footer</h1>
+
+         </div>
+          
     </div>
   );
 };

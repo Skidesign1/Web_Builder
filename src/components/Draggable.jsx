@@ -13,7 +13,7 @@ const Draggable = ({ id, name, icon, component }) => {
   };
 
   return (
-    <div ref={setNodeRef} style={style} {...listeners} {...attributes} className="cursor-move flex items-center" onDragStart={handleDragStart}>
+    <div ref={setNodeRef} style={style} {...listeners} {...attributes} className="cursor-move flex items-center absolute " onDragStart={handleDragStart}>
       {icon}
       <span className="ml-2">{name}</span>
       {component && <div className="hidden">{component}</div>}

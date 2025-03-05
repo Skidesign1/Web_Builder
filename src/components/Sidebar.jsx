@@ -50,9 +50,10 @@ const Sidebar = () => {
   );
 
   return (
-    <aside className="bg-gray-100 h-full w-full p-4">
-      {/* Sidebar Header */}
-      <div className="flex flex-col gap-2 items-center mt-4">
+    <aside className="bg-gray-100 h-full w-full p-4 relative">
+
+           {/* Sidebar Header */}
+      <div className="flex flex-col gap-2 justify-start items-center mt-4">
         <h6><strong>dnd kit</strong></h6>
 
         {/* Search Input */}
@@ -74,14 +75,15 @@ const Sidebar = () => {
         </div>
       </div>
 
+   
       {/* Scrollable section for components */}
-      <div className="flex flex-col items-center gap-3 overflow-y-auto max-h-[70vh] mt-4">
+      <div>
         {/* Core Components */}
-        <h2><strong>Components</strong></h2>
-        <ul className="w-full">
+        <h2 className='mt-5'><strong>Components</strong></h2>
+        <ul className="w-full relative">
           {filteredCoreItems.length > 0 ? (
             filteredCoreItems.map(item => (
-              <li key={item.id} className="flex items-center gap-2 p-2 hover:bg-gray-200 rounded">
+              <li key={item.id} className="flex  items-center gap-2 p-1 hover:bg-gray-200 rounded">
                 <Draggable id={item.id} icon={item.icon} name={item.text} component={item.component} />
               </li>
             ))
@@ -91,21 +93,23 @@ const Sidebar = () => {
         </ul>
 
         {/* Example Components */}
-        <h2><strong>Examples</strong></h2>
-        <ul className="w-full">
-          {filteredPresentsItems.length > 0 ? (
-            filteredPresentsItems.map(item => (
-              <li key={item.id} className="flex items-center gap-2 p-2 hover:bg-gray-200 rounded">
-                <Draggable id={item.id} icon={item.icon} name={item.text} />
-              </li>
-            ))
-          ) : (
-            <p className="text-gray-500">No examples found</p>
-          )}
-        </ul>
+       
       </div>
+            <h2 className='mt-3'><strong>Examples</strong></h2>
+             <ul className="w-full">
+                  {filteredPresentsItems.length > 0 ? (
+                    filteredPresentsItems.map(item => (
+                      <li key={item.id} className="flex items-center gap-1 p-1 hover:bg-gray-200 rounded">
+                        <Draggable id={item.id} icon={item.icon} name={item.text} />
+                      </li>
+                    ))
+                  ) : (
+                    <p className="text-gray-500">No examples found</p>
+                  )}
+        </ul>
+
     </aside>
   );
 };
 
-export default Sidebar;
+export default Sidebar; 

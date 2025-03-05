@@ -92,7 +92,8 @@ body, html {
       width:90%;
       display:flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      color:white;
       padding-left: 2rem;
       padding-right: 6rem;
       
@@ -119,6 +120,24 @@ body, html {
 .overstyle:hover .sub-over{
 
    display:block;
+
+}
+
+
+/*canvas mainframe*/
+
+.first-layout{
+
+    height:6rem;
+    border-bottom: 1px solid black;
+
+}
+
+
+.second-layout{
+
+   height:26rem;
+   border-bottom: 1px solid black; 
 
 }
 

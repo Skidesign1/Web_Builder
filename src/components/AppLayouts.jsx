@@ -24,14 +24,14 @@ const AppLayout = () => {
 
   return (
     <DndContext onDragEnd={handleDragEnd}>
-      <div className='maincont bg-black'>
+      <div className='maincont bg-black relative' >
         <Navbar onToggleEditor={handleToggleEditor} />
         <div className="mygrid relative">
           <div className='myborder'>
             <Sidebar />
           </div>
           <div className='border-2 border-dashed bg-black'>
-            <Canvas />
+              <Canvas />
             {components.map((item, index) => (
               <OverComponent key={index} name={item.name} />
             ))}
@@ -42,5 +42,5 @@ const AppLayout = () => {
   );
 };
 
-//welcome
+
 export default AppLayout;
